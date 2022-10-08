@@ -68,7 +68,6 @@ contract BookLibrary is Ownable {
         for (uint i = 0; i < borrowedByUser.length; i++) {
             if (borrowedByUser[i].id == _bookId) {
                 alreadyBorrowed = true;
-                break;
             }
         }
         require(!alreadyBorrowed, "A user should not borrow more than one copy of a book at a time.");
